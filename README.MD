@@ -96,7 +96,7 @@ git push origin home
 ```sh 
 git checkout main
 git merge home
-git branch -d home
+git branch -D home
 ```
 
 #🔹 Rama productos
