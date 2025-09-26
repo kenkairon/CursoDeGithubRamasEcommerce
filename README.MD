@@ -146,6 +146,7 @@ En productos, creamos un archivo productos.html con el siguiente código:
 
 ```
 1- En index.html modificamos el menú agregando el link a productos Pero estaba en la rama home Pero lo eliminanos
+Vamos a volver a restaurarlo pero vamos a revisar el número del commit
 ```sh 
 git reflow
 ```
