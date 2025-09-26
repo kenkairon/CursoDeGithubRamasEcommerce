@@ -165,6 +165,20 @@ git merge home
 git branch -d home
 ```
 
+5. Me situo en productos y agrego los cambios en la rama productos
+```sh
+git checkout productos
+git add .
+git commit -m "Agrego productos a la rama productos"
+git push origin productos
+```
+
+6. Me situo a la rama main y hago el merge y elimino la rama productos
+```sh 
+git checkout main
+git merge productos
+git branch -d productos
+
 📌 3. Ejercicio con GitHub Flow
 
 Eliminamos las ramas del proyecto.
