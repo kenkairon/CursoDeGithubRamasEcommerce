@@ -332,7 +332,11 @@ git merge release
 git branch hotfix
 ```
 2- Eliminamos la línea de testeo.
-
+```sh
+git add .
+git commit -m "eliminamos la linea del testeo"
+git push origin hotfix
+```
 3- Subimos el cambio directamente a main.
 ```sh
 git checkout main
