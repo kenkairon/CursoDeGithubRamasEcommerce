@@ -63,9 +63,10 @@ git branch
 ```sh
 git branch home
 ```
-3. Confirmamos que la rama fue creada.
+3. Confirmamos que la rama fue creada y nos situamos en la rama home
 ```sh
 git branch
+git checkout home
 ```
 
 4. En home, creamos un menú de navegación en index.html:
