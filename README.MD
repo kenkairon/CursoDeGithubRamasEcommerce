@@ -215,6 +215,12 @@ git add .
 git commit -m "resolviendo conflictos"
 git push origin main
 ```
+
+9. Elimino rama productos
+```sh
+git branch -d productos
+```
+
 # 📌 3. Ejercicio con GitHub Flow
 
 1- Creamos la rama develop.
@@ -282,6 +288,13 @@ git checkout feature/boton
 <input type="button" value="Click me" />
 
 ```
+8-Agregamos lo cambios 
+```sh 
+git add .
+git commit -m "agregamos los cambios a la rama feature/boton"
+git push origin feature/boton
+```
+
 8- Desde develop integramos feature/boton y feature/footer.
 ```sh
 git checkout develop
