@@ -92,11 +92,11 @@ git add .
 git commit -m "Agregamos el menu a home"
 git push origin home
 ```
-6. Integramos los cambios a main.
+6. Integramos los cambios a main y eliminamos la rama home.
 ```sh 
 git checkout main
 git merge home
-git checkout -d home
+git branch -d home
 ```
 
 #🔹 Rama productos
@@ -109,6 +109,7 @@ git branch productos
 2.Checamos las ramas.
 ```sh
 git branch
+git branch productos
 git checkout productos
 ```
 En productos, creamos un archivo productos.html con el siguiente código:
