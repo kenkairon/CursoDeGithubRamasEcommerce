@@ -154,20 +154,48 @@ git reflow
 ```sh
 git branch home b7d9e21
 ```
-3- Movemos los cambios al área de preparación y confirmamos.
+3- en la restauracion vamos a agregar el link del producto 
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>
+     E-Commer
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand nv1" href="productos.html">Productos</a>
+      <a class="navbar-brand nv1" href="#">Contacto</a>
+    </div>
+  </div>
+</nav>
+  </body>
+</html>
+```
+4- Movemos los cambios al área de preparación y confirmamos.
 ```sh
 git add .
 git commit -m "agregamos el link productos"
 git push origin home
 ```
-4-Integramos los cambios a main y nos situamos a la rama main y volvemos a eliminar la rama home
+5-Integramos los cambios a main y nos situamos a la rama main y volvemos a eliminar la rama home
 ```sh
 git checkout main
 git merge home
 git branch -d home
 ```
 
-5. Me situo en productos y agrego los cambios en la rama productos
+6. Me situo en productos y agrego los cambios en la rama productos
 ```sh
 git checkout productos
 git add .
@@ -175,13 +203,13 @@ git commit -m "Agrego productos a la rama productos"
 git push origin productos
 ```
 
-6. Me situo a la rama main y hago el merge y elimino la rama productos
+7. Me situo a la rama main y hago el merge y elimino la rama productos
 ```sh 
 git checkout main
 git merge productos
 git branch -d productos
 ```
-7. Si me genera conflicto al agregar productos
+8. Si me genera conflicto al agregar productos
 ```sh
 git add .
 git commit -m "resolviendo conflictos"
