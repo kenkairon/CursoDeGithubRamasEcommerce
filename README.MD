@@ -215,13 +215,22 @@ git add .
 git commit -m "resolviendo conflictos"
 git push origin main
 ```
-📌 3. Ejercicio con GitHub Flow
+9. Elimino rama productos
+```sh
+git branch -d productos
+```
+# 📌 3. Ejercicio con GitHub Flow
 
-Creamos la rama develop.
-
-Creamos la rama feature/footer y accedemos a ella.
-
-Creamos una carpeta css y dentro un archivo main.css con el siguiente código:
+1- Creamos la rama develop.
+```sh
+git branch develop
+```
+2- Creamos la rama feature/footer y accedemos a ella.
+```sh
+git branch feature/footer 
+git checkout feature/footer 
+```
+3- Creamos una carpeta css y dentro un archivo main.css con el siguiente código:
 
 ```css
 #page-container {
@@ -241,7 +250,7 @@ Creamos una carpeta css y dentro un archivo main.css con el siguiente código:
 }
 
 ```
-En el archivo index.html, agregamos en <head>:
+4- En el archivo index.html, agregamos en <head>:
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -258,39 +267,71 @@ En <body> agregamos el footer:
   <footer id="footer"></footer>
 </div>
 ```
-Subimos los cambios al repositorio remoto.
-
-Desde develop creamos otra rama llamada feature/boton.
-
-Agregamos el siguiente código en index.html:
+5- Subimos los cambios al repositorio remoto.
+```sh
+git add .
+git commit -m "Subimos los css a la rama feature/footer"
+git push feature/footer 
+```
+6- Desde develop creamos otra rama llamada feature/boton.
+```sh
+git checkout develop
+git branch feature/boton
+git checkout feature/boton
+```
+7- Agregamos el siguiente código en index.html:
 
 ```html
 
 <input type="button" value="Click me" />
 
 ```
-Desde develop integramos feature/boton y feature/footer.
+8-Agregamos lo cambios 
+```sh 
+git add .
+git commit -m "agregamos los cambios a la rama feature/boton"
+git push origin feature/boton
+```
+8- Desde develop integramos feature/boton y feature/footer.
+```sh
+git checkout develop
+git merge feature/boton
+git merge feature/footer
+```
+9- Subimos los cambios al remoto.
+```sh
+git push origin develop
+```
+10 -Creamos la rama release desde develop.
+```sh
+git branch release
+```
+10- Verificamos que todo funcione correctamente.
 
-Subimos los cambios al remoto.
+11- Integramos release a main.
+```sh
+git checkout main
+git merge release
+```
 
-Creamos la rama release desde develop.
+# 📌 4. Hotfix (corrección rápida)
 
-Verificamos que todo funcione correctamente.
-
-Integramos release a main.
-
-📌 4. Hotfix (corrección rápida)
-
-⚠️ Se detectó un error: dejamos la línea de testeo en el código.
+## ⚠️ Se detectó un error: dejamos la línea de testeo en el código.
 
 ```html
 <h1>Testear footer</h1>
 
 ```
-➡️ Solución:
+1- ➡️ Solución:
 
-Creamos la rama hotfix.
+1- Creamos la rama hotfix.
+```sh
+git branch hotfix
+```
+2- Eliminamos la línea de testeo.
 
-Eliminamos la línea de testeo.
-
-Subimos el cambio directamente a main.
+3- Subimos el cambio directamente a main.
+```sh
+git checkout main
+git merge hotfix
+```
