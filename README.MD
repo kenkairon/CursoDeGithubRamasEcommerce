@@ -144,11 +144,26 @@ En productos, creamos un archivo productos.html con el siguiente código:
 </html>
 
 ```
-En index.html modificamos el menú agregando el link a productos.
-
-Movemos los cambios al área de preparación y confirmamos.
-
-Integramos los cambios a main.
+1- En index.html modificamos el menú agregando el link a productos Pero estaba en la rama home Pero lo eliminanos
+```sh 
+git reflow
+```
+2- Revisamos el numero del commit y volvemos a restablecer la rama home 
+```sh
+git branch home b7d9e21
+```
+3- Movemos los cambios al área de preparación y confirmamos.
+```sh
+git add .
+git commit -m "agregamos el link productos"
+git push origin home
+```
+4-Integramos los cambios a main y nos situamos a la rama main y volvemos a eliminar la rama home
+```sh
+git checkout main
+git merge home
+git branch -d home
+```
 
 📌 3. Ejercicio con GitHub Flow
 
