@@ -43,12 +43,15 @@ git commit -m "Primer commit index.html"
 git remote add origin git@github.com:kenkairon/CursoDeGithubRamasEcommerce.git
 git remote -v
 ```
-Subimos los cambios con git push.
+4-Subimos los cambios con git push.
 ```sh
 git branch -M main
 git push -u origin main
 ```
-
+!Nota solo en el caso que hayas escrito mal el remoto de origen No lo debes escribir si no paso
+```sh
+git remote remove origin
+```
 # 📌 2. Creación de ramas y nuevas funcionalidades
 ## 🔹 Rama home
 
