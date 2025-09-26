@@ -40,7 +40,8 @@ git commit -m "Primer commit index.html"
 ```
 3- Conectamos el repositorio local con el remoto usando origin.
 ```sh
-git remote add origin https://github.com/kenkairon/CursoDeGithubRamasEcommerce
+git remote add origin git@github.com:kenkairon/CursoDeGithubRamasEcommerce.git
+git remote -v
 ```
 Subimos los cambios con git push.
 ```sh
