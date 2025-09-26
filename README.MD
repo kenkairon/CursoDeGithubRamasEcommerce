@@ -179,10 +179,14 @@ git push origin productos
 git checkout main
 git merge productos
 git branch -d productos
-
+```
+7. Si me genera conflicto al agregar productos
+```sh
+git add .
+git commit -m "resolviendo conflictos"
+git push origin main
+```
 📌 3. Ejercicio con GitHub Flow
-
-Eliminamos las ramas del proyecto.
 
 Creamos la rama develop.
 
