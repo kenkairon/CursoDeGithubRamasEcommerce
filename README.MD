@@ -295,23 +295,23 @@ git commit -m "agregamos los cambios a la rama feature/boton"
 git push origin feature/boton
 ```
 
-8- Desde develop integramos feature/boton y feature/footer.
+9- Desde develop integramos feature/boton y feature/footer.
 ```sh
 git checkout develop
 git merge feature/boton
 git merge feature/footer
 ```
-9- Subimos los cambios al remoto.
+10- Subimos los cambios al remoto.
 ```sh
 git push origin develop
 ```
-10 -Creamos la rama release desde develop.
+11 -Creamos la rama release desde develop.
 ```sh
 git branch release
 ```
-10- Verificamos que todo funcione correctamente.
+12- Verificamos que todo funcione correctamente.
 
-11- Integramos release a main.
+13- Integramos release a main.
 ```sh
 git checkout main
 git merge release
@@ -325,7 +325,7 @@ git merge release
 <h1>Testear footer</h1>
 
 ```
-1- ➡️ Solución:
+### ➡️ Solución:
 
 1- Creamos la rama hotfix.
 ```sh
