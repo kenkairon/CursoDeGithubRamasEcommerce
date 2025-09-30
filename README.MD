@@ -358,12 +358,12 @@ git branch -m rama-vieja nuevo-nombre
 git push origin -u nuevo-nombre
 
 ```
-### d) Eliminar la rama vieja en remoto:
+#### d) Eliminar la rama vieja en remoto:
 ```sh
 git push origin --delete rama-vieja
 
 ```
-### si es la rama principal (main o master), primero cámbiala en GitHub, porque eso actualiza la configuración del repo (PRs, rama por defecto, etc.), y luego actualizas tu local con:
+#### si es la rama principal (main o master), primero cámbiala en GitHub, porque eso actualiza la configuración del repo (PRs, rama por defecto, etc.), y luego actualizas tu local con:
 ```sh
 git fetch origin
 git branch -m main nuevo-nombre
