@@ -342,3 +342,31 @@ git push origin hotfix
 git checkout main
 git merge hotfix
 ```
+
+### Adicional Cambiar de Nombre a la Rama
+
+#### a) Si estás en la rama que quieres renombrar:
+```sh
+git branch -m nuevo-nombre
+```
+#### b) Si NO estás en la rama:
+```sh
+git branch -m rama-vieja nuevo-nombre
+```
+#### c) Subir la rama renombrada a GitHub:
+```sh
+git push origin -u nuevo-nombre
+
+```
+### d) Eliminar la rama vieja en remoto:
+```sh
+git push origin --delete rama-vieja
+
+```
+### si es la rama principal (main o master), primero cámbiala en GitHub, porque eso actualiza la configuración del repo (PRs, rama por defecto, etc.), y luego actualizas tu local con:
+```sh
+git fetch origin
+git branch -m main nuevo-nombre
+git branch -u origin/nuevo-nombre nuevo-nombre
+git remote set-head origin -a
+```
